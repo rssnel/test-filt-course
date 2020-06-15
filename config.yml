@@ -1,0 +1,16 @@
+title: Test filt
+description: Test file
+template:
+  repo: test-filt-template
+  name: test-filt
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
